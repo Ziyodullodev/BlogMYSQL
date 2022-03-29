@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ro`yxatdan O`tish Bolimi</title>
+</head>
+<body>
+
+<h1>Ro`yxatdan O`tish Bolimi </h1>
+
+<form action="{% url 'reg' %}" method="post">{% csrf_token %}
+    <input type="text" name="login"><br>
+    <input type="password" name="parol"><br>
+    <button type="submit"> Tasdiqlash </button>
+</form>
+</body>
+</html>

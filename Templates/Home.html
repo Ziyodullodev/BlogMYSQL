@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<h1>Salom Siz bosh sahifadasiz</h1>
+<h2><a href="AddMaqola">Maqola qoshish</a></h2>
+<h2>Bizdagi yangi maqolalar</h2>
+{% for m in maqolalar %}
+<ul>
+    <a href="maqola/{{m.id}}">
+    <li>{{m.sarlavha}}</li>
+        </a>
+</ul>
+{% endfor %}
+</body>
+</html>

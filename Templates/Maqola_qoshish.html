@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Maqola qoshish</title>
+</head>
+<body>
+<h1>Maqola Qoshish</h1>
+
+<form action="{% url 'addmaqola' %}" method="post">{% csrf_token %}
+    <input type="text" name="sarlavha">
+    <input type="text" name="mavzu">
+    <input type="text" name="matn">
+    <select name="muallif">
+        {% for m in M %}
+        <option value="{{m.id}}">{{m.username}}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Qoshish</button>
+</form>
+</body>
+</html>

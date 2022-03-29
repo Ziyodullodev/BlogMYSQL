@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Bolimi</title>
+</head>
+<body>
+<h1>Login Bolimi </h1>
+
+<form action="{% url 'login' %}" method="post">{% csrf_token %}
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button type="submit">Tasdiqlash</button>
+</form>
+</body>
+</html>
